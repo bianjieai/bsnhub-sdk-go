@@ -4,7 +4,7 @@ import (
 	sdk "github.com/bianjieai/irita-sdk-go"
 	"github.com/bianjieai/irita-sdk-go/types"
 
-	"github.com/bianjieai/bsnhub-sdk-go/oracle"
+	"github.com/bianjieai/bsnhub-sdk-go/irismod/oracle"
 )
 
 func NewIRITAClient(cfg types.ClientConfig) sdk.IRITAClient {
