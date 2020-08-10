@@ -3,7 +3,7 @@ package irita.modules.oracle;
 
 import "third_party/proto/gogoproto/gogo.proto";
 import "google/protobuf/timestamp.proto";
-import "third_party/proto/irismod/types/types.proto";
+import "third_party/proto/irita/types/types.proto";
 import "third_party/proto/irismod/service/types.proto";
 
 option go_package = "github.com/bianjieai/bsnhub-sdk-go/modules/oracle";
@@ -19,7 +19,7 @@ message MsgCreateFeed {
     repeated bytes providers = 6 [ (gogoproto.casttype) = "github.com/bianjieai/irita-sdk-go/types.AccAddress" ];
     string input = 7;
     int64 timeout = 8;
-    repeated irismod.Coin service_fee_cap = 9 [
+    repeated irita.Coin service_fee_cap = 9 [
         (gogoproto.nullable) = false,
         (gogoproto.castrepeated) = "github.com/bianjieai/irita-sdk-go/types.Coins",
         (gogoproto.moretags) = "yaml:\"service_fee_cap\""
@@ -49,7 +49,7 @@ message MsgEditFeed {
     uint64 latest_history = 3 [ (gogoproto.moretags) = "yaml:\"latest_history\"" ];
     repeated bytes providers = 4 [ (gogoproto.casttype) = "github.com/bianjieai/irita-sdk-go/types.AccAddress" ];
     int64 timeout = 5;
-    repeated irismod.Coin service_fee_cap = 6 [
+    repeated irita.Coin service_fee_cap = 6 [
         (gogoproto.nullable) = false,
         (gogoproto.castrepeated) = "github.com/bianjieai/irita-sdk-go/types.Coins",
         (gogoproto.moretags) = "yaml:\"service_fee_cap\""
@@ -90,7 +90,7 @@ message FeedContext {
     repeated bytes providers = 3 [ (gogoproto.casttype) = "github.com/bianjieai/irita-sdk-go/types.AccAddress" ];
     string input = 4;
     int64 timeout = 5;
-    repeated irismod.Coin service_fee_cap = 6 [
+    repeated irita.Coin service_fee_cap = 6 [
         (gogoproto.nullable) = false,
         (gogoproto.castrepeated) = "github.com/bianjieai/irita-sdk-go/types.Coins",
         (gogoproto.moretags) = "yaml:\"service_fee_cap\""
