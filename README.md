@@ -26,7 +26,7 @@ The initialization SDK code is as follows:
 import (
     "github.com/bianjieai/irita-sdk-go/types"
     "github.com/bianjieai/irita-sdk-go/types/store"
-    oraclesdk "github.com/bianjieai/bsnhub-sdk-go"
+    sdk "github.com/bianjieai/bsnhub-sdk-go"
     ...
 )
 
@@ -40,8 +40,8 @@ if err != nil {
     panic(err)
 }
 
-client := oraclesdk.NewIRITAClient(cfg)
-oracleClient := oraclesdk.OracleClient(client)
+client := sdk.NewIRITAClient(cfg)
+oracleClient := sdk.OracleClient(client)
 
 ...
 ```
